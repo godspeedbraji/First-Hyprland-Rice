@@ -1,0 +1,101 @@
+
+* {
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Workspaces */
+#workspaces {
+    padding: 0 5px;
+    margin: 0;
+}
+
+#workspaces button {
+    min-width: 22px;
+    padding: 0 5px;
+    margin: 0 1px;
+    color: #777777;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#workspaces button.active {
+    color: #e2231a;
+    background-color: transparent;
+}
+
+#workspaces button:hover {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+#workspaces button.urgent {
+    color: #e2231a;
+    background-color: transparent;
+}
+
+/* Clock */
+#clock {
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0 12px;
+}
+
+/* White system icons */
+#network,
+#cpu,
+#memory,
+#pulseaudio {
+    color: #ffffff;
+    padding: 0 6px;
+}
+
+/* Battery */
+#battery {
+    color: #55b86a;
+    padding: 0 6px;
+}
+
+#battery.warning {
+    color: #e0bd45;
+}
+
+#battery.critical {
+    color: #d94b4b;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: #5b9bd5;
+}
+
+/* Tray */
+#tray {
+    padding: 0 5px;
+}
+
+/* Power */
+#custom-power {
+    color: #d94b4b;
+    padding: 0 8px;
+}
+
+/* Tooltips */
+tooltip {
+    background-color: #101010;
+    color: #ffffff;
+    border: 1px solid #333333;
+    padding: 5px;
+}

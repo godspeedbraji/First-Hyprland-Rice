@@ -1,0 +1,135 @@
+
+configuration {
+    modi: "drun,run,window";
+    show-icons: false;
+
+    display-drun: "APPS";
+    display-run: "RUN";
+    display-window: "WINDOWS";
+
+    drun-display-format: "{name}";
+    font: "JetBrainsMono Nerd Font Propo 9";
+
+    disable-history: false;
+    sort: true;
+    matching: "fuzzy";
+    hover-select: false;
+    scrollbar: false;
+}
+
+/* Colors */
+* {
+    bg: #101010;
+    bg-alt: #101010;
+    fg: #ffffff;
+    muted: #888888;
+    red: #d94b4b;
+
+    background-color: @bg;
+    text-color: @fg;
+}
+
+/* Main window */
+window {
+    width: 420px;
+    location: center;
+    anchor: center;
+
+    border: 1px;
+    border-color: @red;
+    border-radius: 0px;
+
+    background-color: @bg;
+}
+
+/* Layout */
+mainbox {
+    padding: 9px;
+    spacing: 6px;
+    background-color: @bg;
+
+    children: [ inputbar, listview ];
+}
+
+/* Search bar */
+inputbar {
+    padding: 7px;
+    spacing: 6px;
+
+    border: 0px 0px 1px 0px;
+    border-color: @red;
+
+    background-color: @bg;
+
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: @red;
+    background-color: transparent;
+}
+
+entry {
+    text-color: @fg;
+    placeholder: "Search...";
+    placeholder-color: @muted;
+    background-color: transparent;
+}
+
+/* Separator - black */
+separator {
+    enabled: true;
+    background-color: @bg;
+}
+
+/* Application list */
+listview {
+    columns: 1;
+    lines: 6;
+    spacing: 2px;
+
+    fixed-height: true;
+    scrollbar: false;
+
+    background-color: @bg;
+}
+
+/* Entries */
+element {
+    padding: 6px;
+    spacing: 0px;
+
+    background-color: @bg;
+    text-color: @fg;
+}
+
+/* Normal entries */
+element normal.normal {
+    background-color: @bg;
+    text-color: @fg;
+}
+
+/* Alternate entries */
+element alternate.normal {
+    background-color: @bg;
+    text-color: @fg;
+}
+
+/* Selected entry */
+element selected.normal {
+    background-color: #3a1717;
+    text-color: @fg;
+
+    border: 0px 0px 0px 2px;
+    border-color: @red;
+}
+
+/* Entry text */
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+element-text selected {
+    text-color: @fg;
+}

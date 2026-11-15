@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+choice=$(printf '%s\n' \
+    '  Lock screen' \
+    '󰍃  Log out' \
+    '󰜉  Restart' \
+    '  Shut down' \
+    '󰗼  Cancel' |
+    rofi -dmenu -i -p "Power")
+
+case "$choice" in
+    *"Lock screen"*)
+        hyprlock
+        ;;
+    *"Log out"*)
+        hyprctl dispatch exit
+        ;;
+    *"Restart"*)
+        systemctl reboot
+        ;;
+    *"Shut down"*)
+        systemctl poweroff
+        ;;
+    *)
+        exit 0
+        ;;
+esac
